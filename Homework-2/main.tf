@@ -3,6 +3,3 @@ resource "aws_key_pair" "bastion" {
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "kaizen-achelya"
-  }
