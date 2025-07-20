@@ -1,6 +1,6 @@
-resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
-  description = "Allow TLS inbound traffic"
+resource "aws_security_group" "web_sg" {
+  name        = "web-security-group"
+  description = "Allow SSH, HTTP, HTTPS, MySQL"
  
 
   ingress {
@@ -42,6 +42,6 @@ resource "aws_security_group" "allow_tls" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "allow_tls"
+    Name = "web_sg"
   }
 }
